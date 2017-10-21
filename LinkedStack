@@ -1,0 +1,52 @@
+package first;
+import java.util.LinkedList;
+public class LinkedList {
+	public class LinkedStack implements Stack {
+		private LinkedList<Object> list = new LinkedList<Object>();
+		@Override
+		public Object pop() {
+			// TODO Auto-generated method stub
+			if (isEmpty()) {
+				return null;
+			}else {
+				return list.removeFirst();
+			}
+		}
+
+		@Override
+		public Object peek() {
+			// TODO Auto-generated method stub
+			if(isEmpty()) {
+				return null;
+			}else {
+				return list.getFirst();
+			}
+		}
+
+		@Override
+		public void push(Object e) {
+			// TODO Auto-generated method stub
+			list.addFirst(e);
+		}
+
+		@Override
+		public void clear() {
+			// TODO Auto-generated method stub
+			list.clear();
+		}
+
+		@Override
+		public int size() {
+			// TODO Auto-generated method stub
+			return list.size();
+		}
+
+		@Override
+		public boolean isEmpty() {
+			// TODO Auto-generated method stub
+			return list.isEmpty();
+		}
+	}
+
+}
+}
