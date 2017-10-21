@@ -1,0 +1,12 @@
+package first;
+
+public class ToolsNGTest2 {
+public Object[][] dataFortestToHexadecimal() {
+return new Object[][] { {80, "50"},{79, "4F"},{69, "45"},{56, "38"},{1,"1"}};
+}
+@Test(dataProvider="dataFortestToHexadecimal")
+public void testToHexadecimal(int exp, String expResult) {
+String result = Tools.toHexadecimal(exp);
+assertEquals(result, expResult);
+}
+}
