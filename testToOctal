@@ -1,0 +1,16 @@
+package first;
+import static org.testng.Assert.*;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+public class ToolsNGTest {
+public void testToOctal() 
+{
+Object[][] datas = new Object[][] {{64,"101"},{25,"31"}, {44,"54"}, {85, "125"}, {69,"105"}};
+for (Object[] data : datas) 
+{
+String result =Tools.toOctal((Integer)data[0]);
+String expResult = data[1].toString();
+assertEquals(result, expResult);
+}
+}
+}
