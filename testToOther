@@ -1,0 +1,15 @@
+package first;
+import static org.testng.Assert.*;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+public class ToolsNGTest3 {
+	@DataProvider(name="dataFortestToOther")
+    public Object[][] dataFortestToOther() {
+     return new Object[][] { {89,16,"59"},{23,2, "10111"},{89,8,"131"}, {77,16,"4D"},{1,2,"1"},{1,8,"1"},{1,16,"1"}};
+    }
+@Test(dataProvider="dataFortestToOther")
+    public void testToOther(int num,int d, String expResult) {
+        String result = Tools.toOther(num,d);
+        assertEquals(result, expResult);
+    }
+}
