@@ -1,0 +1,21 @@
+package first;
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Tools3 {
+	public static String tochar(int num, int d) {
+		Stack strStack = new Stack();
+		String result = "";
+		for (; num >= 1; num /= d) {
+			if (d == 16) {
+				strStack.push(toChar(num % d)); 
+			} else
+				strStack.push(num % d);
+		}
+	while (!strStack.isEmpty()) {
+		result += strStack.pop().toString();
+	}
+	return result;
+	}
+
+}
